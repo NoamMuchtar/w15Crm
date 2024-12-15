@@ -1,18 +1,18 @@
 {
   "customers": [
     {
-      "id": "1",
       "firstName": "Noam",
       "lastName": "Muchtar",
       "email": "noam@webify.co.il",
-      "phone": "0542519595"
+      "phone": "0542519592",
+      "id": "1"
     },
     {
-      "id": "2",
-      "firstName": "Israel",
-      "lastName": "Israeli",
-      "email": "israel@israeli.co.il",
-      "phone": "050555555"
+      "firstName": "Ari",
+      "lastName": "Muchtar",
+      "email": "ari.mucht@gmail.com",
+      "phone": "0542519596",
+      "id": "c900"
     }
   ]
 }

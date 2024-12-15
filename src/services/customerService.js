@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const api = "";
+const api = `${import.meta.env.VITE_API}/customers`;
 
 // CRUD - Create - Read - Update - Delete
 // Get all customers from db
@@ -23,4 +23,9 @@ export function updateCustomer(cusId, updatedCustomer) {
 // delete a specific custome from db
 export function deleteCustomer(cusId) {
   return axios.delete(`${api}/${cusId}`);
+}
+
+// check if customer exsist
+export function customerExsistCheck(cusEmail) {
+  return axios.get(`${api}?email=${cusEmail}`);
 }
