@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const api = `${import.meta.env.VITE_API}/customers`;
+// const api = `${process.env.REACT_APP_API}/customers`;
 
 // CRUD - Create - Read - Update - Delete
 // Get all customers from db

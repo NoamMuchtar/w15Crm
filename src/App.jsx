@@ -5,12 +5,14 @@ import Customers from "./components/Customers";
 import AddCustomer from "./components/AddCustomer";
 import UpdateCustomer from "./components/UpdateCustomer";
 import Navbar from "./components/Navbar";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
+      <ToastContainer />
       <Router>
         <Navbar />
         <Routes>

@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import { addCustomer, customerExsistCheck } from "../services/customerService";
 import * as yup from "yup";
+import { errorMsg, successMsg } from "../services/feedbackService";
 
 function AddCustomer() {
   let checkExsist = [];
@@ -25,10 +26,13 @@ function AddCustomer() {
         .then((checkedCus) => {
           checkExsist = checkedCus.data;
           if (checkExsist.length) {
-            alert("user exsist");
+            errorMsg("User exsist");
           } else {
             addCustomer(values)
-              .then(() => console.log("Customer Added"))
+              .then(() => {
+                console.log("Customer Added");
+                successMsg("Customer added successfuly");
+              })
               .catch((err) => console.log(err));
             resetForm();
           }
